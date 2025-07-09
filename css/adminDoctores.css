@@ -1,0 +1,114 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo del cuerpo */
+body {
+  background-color: #fff;
+  color: #000;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* Título */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Botón principal */
+button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+}
+
+thead {
+  background-color: #000;
+  color: #fff;
+}
+
+th, td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+/* Botones de acciones */
+td button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  margin: 5px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+td button:hover {
+  background-color: #444;
+}
+
+/* Responsive: tarjetas tipo lista en móviles */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+  }
+
+  td button {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+  }
+}

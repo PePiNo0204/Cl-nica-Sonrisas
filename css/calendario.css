@@ -1,0 +1,139 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+}
+
+/* Contenedor principal */
+.calendar-wrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Controles del calendario */
+.calendar-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.calendar-controls button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.calendar-controls button:hover {
+  background-color: #333;
+}
+
+/* Título del calendario */
+.calendar-container h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+/* Cuadrícula del calendario */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+/* Cabecera de días */
+.day-header {
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 2px solid #000;
+}
+
+/* Día del calendario */
+.day {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 8px;
+  min-height: 120px;
+  position: relative;
+  background-color: #fafafa;
+  transition: 0.2s;
+}
+
+.day:hover {
+  background-color: #f0f0f0;
+}
+
+/* Día vacío */
+.day.empty {
+  background-color: transparent;
+  border: none;
+}
+
+/* Número del día */
+.date-number {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+/* Citas del día */
+.event {
+  background-color: #000;
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.event:hover {
+  background-color: #333;
+}
+
+.event span {
+  font-weight: bold;
+  display: block;
+}
+
+.event p {
+  margin: 4px 0 0 0;
+  font-size: 0.85rem;
+  word-break: break-word;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .calendar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .calendar-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .calendar-controls button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .calendar-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

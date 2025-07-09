@@ -1,0 +1,114 @@
+/* Reset y fuente base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo general */
+body {
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Contenedor general */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Subtítulo */
+.container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Contenedor de tarjetas */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjeta individual */
+.tarjeta {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+/* Nombre del doctor */
+.tarjeta .info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Acciones */
+.acciones {
+  margin-top: auto;
+}
+
+.accion {
+  display: inline-block;
+  background-color: #fff;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.accion i {
+  margin-right: 8px;
+}
+
+.accion:hover {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+/* Mensaje si no hay doctores */
+.container p {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-top: 20px;
+}
+
+/* Responsive ajustes para móvil */
+@media (max-width: 600px) {
+  .tarjeta {
+    padding: 15px;
+  }
+
+  .tarjeta .info h3 {
+    font-size: 1rem;
+  }
+
+  .accion {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,125 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  border-bottom: 2px solid #000;
+  padding-bottom: 10px;
+}
+
+/* Mensaje de error */
+.error-message {
+  color: red;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Encabezado y buscador */
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#dniSearchForm {
+  display: flex;
+  gap: 10px;
+}
+
+#dniSearchForm input[type="text"] {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 250px;
+}
+
+#dniSearchForm button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#dniSearchForm button:hover {
+  background-color: #333;
+}
+
+/* Grid de citas */
+.citas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjeta individual */
+.cita-card {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  transition: transform 0.2s ease;
+}
+
+.cita-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cita-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.cita-card p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+.estado-cita {
+  font-weight: bold;
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+  #dniSearchForm {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #dniSearchForm input[type="text"] {
+    width: 100%;
+  }
+
+  .cita-card {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}

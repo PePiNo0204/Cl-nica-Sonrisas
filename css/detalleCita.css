@@ -1,0 +1,53 @@
+#detalle-cita {
+    position: absolute;
+    display: none;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 350px;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.detalle-cita h2,
+.detalle-cita h3 {
+    margin-top: 0;
+    font-weight: bold;
+    color: #000;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+
+.detalle-cita p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+.detalle-cita strong {
+    color: #111;
+}
+
+.detalle-cita .error {
+    color: red;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 15px;
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+}
